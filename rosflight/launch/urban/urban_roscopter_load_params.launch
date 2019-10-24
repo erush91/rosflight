@@ -1,0 +1,6 @@
+<launch>
+  <!-- Load common roscopter parameters -->
+  <include file="/home/ohrad/catkin_ws/src/roscopter/roscopter/launch/urban_roscopter_load_params.launch"/>
+
+</launch>
+
