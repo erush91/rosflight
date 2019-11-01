@@ -13,6 +13,9 @@ add_message_files(
   OutputRaw.msg
   RCRaw.msg
   Command.msg
+  BtrajCommand.msg
+  Estop.msg
+  ControlStatus.msg
   Barometer.msg
   Airspeed.msg
   Attitude.msg
