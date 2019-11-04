@@ -44,7 +44,7 @@
 - {name: MAG_Z_BIAS, type: 9, value: 0}
 - {name: MIN_THROTTLE, type: 6, value: 1}
 - {name: MIXER, type: 6, value: 2}
-- {name: MOTOR_IDLE_THR, type: 9, value: 0.1000000014901161}
+- {name: MOTOR_IDLE_THR, type: 9, value: 0.08000000014901161}
 - {name: MOTOR_MAX_PWM, type: 6, value: 2000}
 - {name: MOTOR_MIN_PWM, type: 6, value: 1000}
 - {name: MOTOR_PWM_UPDATE, type: 6, value: 450}
