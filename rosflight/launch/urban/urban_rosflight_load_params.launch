@@ -1,5 +1,5 @@
 <launch>
   <!-- Load rosflight parameters -->
-  <node pkg="rosservice" type="rosservice" name="rosflight_param_load_from_file" args="call param_load_from_file /home/$(env HOSTNAME)/catkin_ws/src/rosflight/rosflight/params/urban_rosflight_params.yml" output="screen"/>
+  <node pkg="rosservice" type="rosservice" name="rosflight_param_load_from_file" args="call param_load_from_file /home/ohrad/catkin_ws/src/rosflight/rosflight/params/urban_rosflight_params.yml" output="screen"/>
 </launch>
 
