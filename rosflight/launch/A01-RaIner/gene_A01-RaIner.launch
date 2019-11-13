@@ -1,0 +1,30 @@
+<launch>
+
+  <arg name="enable_sensors"                default="0"/>
+  <arg name="enable_state_estimation"       default="0"/>
+  <arg name="enable_rosflight"              default="1"/>
+  <arg name="enable_optitrack"              default="0"/>
+  <arg name="enable_vicon"                  default="1"/>
+
+  <!-- Launch all the sensors -->
+  <include if="$(arg enable_sensors)" file="$(find rosflight)/launch/A01-RaIner/A01-RaIner_sensors.launch"/>
+
+  <!-- Launch state estimation -->
+  <include if="$(arg enable_state_estimation)" file="$(find robot_localization)/launch/A01-RaIner_ekf.launch" />
+
+  <!-- Launch low level flight controller -->
+  <include if="$(arg enable_rosflight)" file="$(find rosflight)/launch/A01-RaIner/A01-RaIner_rosflight.launch" />
+
+
+  <!-- Launch mid-level flight controller -->
+  <!-- <include if="$(arg )" file="$(find )" /> -->
+
+  
+  <!-- Launch path planning module -->
+  <!-- <include if="$(arg )" file="$(find )" /> -->
+
+  <!-- Launch path planning module -->
+  <include if="$(arg enable_optitrack)" file="$(find vrpn_client_ros)/launch/optitrack.launch" />
+  <include if="$(arg enable_vicon)" file="$(find vrpn_client_ros)/launch/vicon.launch" />
+
+</launch>

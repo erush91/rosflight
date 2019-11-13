@@ -1,0 +1,28 @@
+<!--
+  This file will launch multiple Radar devices and Goggles velocity estimators in separate namespaces
+ -->
+
+<launch>
+
+  <arg name="enable_radar"         default="1"/>
+  <arg name="enable_teraranger"    default="1"/>
+  <arg name="enable_microstrain"   default="1"/>
+  <arg name="enable_rplidar"       default="0"/>
+  <arg name="debug_transforms"     default="0"/>
+
+  <!-- Launch multi-radar and transforms -->
+  <include if="$(arg enable_radar)" file="$(find ti_mmwave_rospkg)/launch/A01-RaIner_multiradar.launch"/>
+
+  <!-- Launch teraranger and transforms -->
+  <include if="$(arg enable_teraranger)" file="$(find teraranger)/launch/A01-RaIner_teraranger.launch"/>  
+
+  <!-- Launch rplidar and transforms -->
+  <include if="$(arg enable_rplidar)" file="$(find rplidar_ros)/launch/A01-RaIner_rplidar.launch"/>
+
+  <!-- Launch microstrain and transforms -->
+  <include if="$(arg enable_microstrain)" file="$(find microstrain_driver)/launch/A01-RaIner_microstrain.launch"/>
+ 
+  <node if="$(arg debug_transforms)" pkg="tf2_ros" type="static_transform_publisher" name="world_base_tf" args="0 0.0 0 0 0 0 /world /base_link"/>
+
+ 
+</launch>

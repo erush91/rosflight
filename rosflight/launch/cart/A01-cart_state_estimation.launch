@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- Launch state estimation -->
+  <include file="$(find cartographer_ros)/launch/urban/launch_gene_2D_F450_1_RPLIDAR_S1.launch" />
+	
+  <!-- Run node that converts Cartographer tf to an odometry message -->
+  <node name="tf2odom" pkg="tf2odom" type="tf2odom" output="screen"/>
+
+
+</launch>

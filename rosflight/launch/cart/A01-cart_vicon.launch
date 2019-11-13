@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="mocap2odom" pkg="mocap2odom" type="Vicon2odom" output="screen"/>
+	
+  <include file="$(find vrpn_client_ros)/launch/vicon.launch" />
+
+</launch>
+
+

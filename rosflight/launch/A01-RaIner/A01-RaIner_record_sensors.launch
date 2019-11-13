@@ -1,0 +1,12 @@
+<launch>
+
+  <node pkg="rosbag" type="record" name="record_sensors_node" output="screen" args="-o /home/ohrad/A01-RaIner_bags/A01-RaIner_sensor_data 
+    /imu_raw
+    /mmWaveDataHdl/vel
+    /mmWaveDataHdl1/vel
+    /teraranger_evo
+    /scan
+    /z_state_estimator/odom
+    /vrpn_client_node/A01RaIner/pose
+    /tf /tf_static"/>
+</launch>

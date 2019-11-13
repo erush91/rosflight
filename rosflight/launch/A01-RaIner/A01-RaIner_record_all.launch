@@ -1,0 +1,19 @@
+<launch>
+
+  <node pkg="rosbag" type="record" name="record_node" output="screen" args="-o /home/ohrad/A01-RaIner_bags/A01-RaIner_data 
+    /imu_raw
+    /odometry/filtered
+    /mmWaveDataHdl/vel
+    /mmWaveDataHdl1/vel
+    /teraranger_evo
+    /command
+    /high_level_command
+    /z_state_estimator/odom
+    /vrpn_client_node/A01RaIner/pose
+    /vrpn_client_node/A01RaIner/accel
+    /vrpn_client_node/A01RaIner/twist
+    /vrpn_velocity/optitrack_frame/filtered
+    /vrpn_velocity/optitrack_frame/raw
+    /vrpn_velocity/vehicle_1_frame/filtered
+    /tf /tf_static"/>
+</launch>

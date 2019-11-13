@@ -44,7 +44,7 @@
 - {name: MAG_Z_BIAS, type: 9, value: 0}
 - {name: MIN_THROTTLE, type: 6, value: 1}
 - {name: MIXER, type: 6, value: 2}
-- {name: MOTOR_IDLE_THR, type: 9, value: 0.08000000014901161}
+- {name: MOTOR_IDLE_THR, type: 9, value: 0.07000000014901161}
 - {name: MOTOR_MAX_PWM, type: 6, value: 2000}
 - {name: MOTOR_MIN_PWM, type: 6, value: 1000}
 - {name: MOTOR_PWM_UPDATE, type: 6, value: 450}
@@ -66,8 +66,8 @@
 - {name: PID_YAW_RATE_D, type: 9, value: 0}
 - {name: PID_YAW_RATE_I, type: 9, value: 0}
 - {name: PID_YAW_RATE_P, type: 9, value: 0.25}
-- {name: RC_ATT_CTRL_CHN, type: 6, value: 4}
-- {name: RC_ATT_MODE, type: 6, value: 1}
+- {name: RC_ATT_CTRL_CHN, type: 6, value: 6}
+- {name: RC_ATT_MODE, type: 6, value: 8}
 - {name: RC_ATT_OVRD_CHN, type: 6, value: -1}
 - {name: RC_F_CHN, type: 6, value: 2}
 - {name: RC_MAX_PITCH, type: 9, value: 0.7860000133514404}
