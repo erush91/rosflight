@@ -8,5 +8,7 @@
   <!-- Run node that converts Cartographer tf to an odometry message -->
   <node name="tf2odom" pkg="tf2odom" type="tf2odom" output="screen"/>
 
+  <!-- Run node that fused Cartographer odom with z-state odom -->
+  <node name="rosflight" pkg="rosflight" type="fuse_odom.py" output="screen"/>
 
 </launch>

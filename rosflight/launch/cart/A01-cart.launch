@@ -2,7 +2,7 @@
 
   <arg name="enable_sensors"                default="1"/>
   <arg name="enable_state_estimation"       default="1"/>
-  <arg name="enable_rosflight"              default="0"/>
+  <arg name="enable_rosflight"              default="1"/>
   <arg name="enable_optitrack"              default="0"/>
   <arg name="enable_vicon"                  default="1"/>
 

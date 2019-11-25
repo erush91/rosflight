@@ -2,21 +2,33 @@
 
 <launch>
 
+  <arg name="enable_simple_command_pub"                default="0"/>
+  <arg name="enable_waypoint_manager"                  default="1"/>
+
   <!-- PID Position Controller -->
-  <node name="controller" pkg="roscopter" type="controller" output="screen">
+  <node name="controller" pkg="roscopter" type="controller" >
           <!-- <remap from="estimate" to="/vrpn/odom"/> -->
           <!-- <remap from="estimate" to="/odometry/filtered"/> -->
           <!-- <remap from="estimate" to="/z_state_estimator/odom"/> -->
-          <remap from="estimate" to="/tf_odom"/>
+	  <!--<remap from="estimate" to="/tf_odom"/>-->
+          <remap from="estimate" to="/fused_odom"/>
+
   </node>
 
   <rosparam command="load" file="$(find roscopter)/params/gene_F450.yaml"/>
 
 
   <!-- Waypoint Manager -->
-  <node name="waypoint_manager" pkg="roscopter" type="simple_command_pub.py" output="screen">
+  <node if="$(arg enable_simple_command_pub)" name="waypoint_manager" pkg="roscopter" type="simple_command_pub.py" output="screen">
           <!--  <remap from="waypoint" to="high_level_command"/> -->
   </node>
+
+
+  <node if="$(arg enable_waypoint_manager)" name="waypoint_manager" pkg="roscopter" type="gene_waypoint_manager.py" output="screen">
+    <remap from="odom" to="/fused_odom"/>
+  </node>
+
+  <rosparam command="load" file="$(find roscopter)/params/A01-cart_waypoints.yaml" />
 
 </launch>
 
