@@ -1,7 +1,12 @@
 <launch>
 
-  <node pkg="rosbag" type="record" name="record_node" output="screen" args="-o /home/ohrad/A01-RaIner_bags/A01-RaIner_data 
+  <node pkg="rosbag" type="record" name="record_node" output="screen" args="-o /home/ohrad/ASPEN-11-27/alldata
+    /attitude
+    /attitude/euler
+    /aux_command
+    /command
     /imu_raw
+    /rc_raw
     /odometry/filtered
     /mmWaveDataHdl/vel
     /mmWaveDataHdl1/vel
