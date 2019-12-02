@@ -48,6 +48,7 @@
 - {name: MOTOR_MAX_PWM, type: 6, value: 2000}
 - {name: MOTOR_MIN_PWM, type: 6, value: 1000}
 - {name: MOTOR_PWM_UPDATE, type: 6, value: 450}
+- {name: OFFBOARD_TIMEOUT, type: 6, value: 400}
 - {name: OVRD_LAG_TIME, type: 6, value: 1000}
 - {name: PARAM_MAX_CMD, type: 9, value: 1}
 - {name: PID_PITCH_ANG_D, type: 9, value: 0.05000000074505806}

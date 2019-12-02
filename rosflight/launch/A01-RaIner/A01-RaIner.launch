@@ -25,6 +25,6 @@
 
   <!-- Launch path planning module -->
   <include if="$(arg enable_optitrack)" file="$(find vrpn_client_ros)/launch/optitrack.launch" />
-  <include if="$(arg enable_vicon)" file="$(find rosflight)/launch/cart/A01-cart_vicon.launch" />
+  <include if="$(arg enable_vicon)" file="$(find rosflight)/launch/A01-RaIner/A01-RaIner_vicon.launch" />
 
 </launch>
