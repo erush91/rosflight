@@ -7,7 +7,7 @@
   <arg name="enable_radar"         default="1"/>
   <arg name="enable_teraranger"    default="1"/>
   <arg name="enable_microstrain"   default="1"/>
-  <arg name="enable_rplidar"       default="1"/>
+  <arg name="enable_rplidar"       default="0"/>
   <arg name="debug_transforms"     default="0"/>
 
   <!-- Launch multi-radar and transforms -->

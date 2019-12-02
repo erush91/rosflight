@@ -4,7 +4,7 @@
   <arg name="enable_state_estimation"       default="1"/>
   <arg name="enable_rosflight"              default="1"/>
   <arg name="enable_optitrack"              default="0"/>
-  <arg name="enable_vicon"                  default="1"/>
+  <arg name="enable_vicon"                  default="0"/>
 
   <!-- Launch all the sensors -->
   <include if="$(arg enable_sensors)" file="$(find rosflight)/launch/A01-RaIner/A01-RaIner_sensors.launch"/>
