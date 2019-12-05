@@ -3,6 +3,9 @@
   <arg name="enable_sensors"                default="1"/>
   <arg name="enable_state_estimation"       default="1"/>
   <arg name="enable_rosflight"              default="1"/>
+  <arg name="enable_roscopter"              default="0"/>
+  <arg name="enable_nearness"               default="1"/>
+  
   <arg name="enable_optitrack"              default="0"/>
   <arg name="enable_vicon"                  default="0"/>
 
@@ -17,11 +20,11 @@
 
 
   <!-- Launch mid-level flight controller -->
-  <!-- <include if="$(arg )" file="$(find )" /> -->
+  <include if="$(arg enable_roscopter)" file="$(find roscopter)/launch/A01-RaIner_roscopter.launch" />
 
   
   <!-- Launch path planning module -->
-  <!-- <include if="$(arg )" file="$(find )" /> -->
+  <include if="$(arg enable_nearness)" file="$(find nearness_control)/launch/A01-RaIner_nearness_control.launch" />
 
   <!-- Launch path planning module -->
   <include if="$(arg enable_optitrack)" file="$(find vrpn_client_ros)/launch/optitrack.launch" />
