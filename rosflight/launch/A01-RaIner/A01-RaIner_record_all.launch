@@ -1,6 +1,6 @@
 <launch>
 
-  <node pkg="rosbag" type="record" name="record_node" output="screen" args="-o /home/ohrad/ASPEN-11-27/alldata
+  <node pkg="rosbag" type="record" name="record_node" output="screen" args="-o /home/ohrad/EDGAR_PREP_12-5/alldata
     /attitude
     /attitude/euler
     /aux_command
@@ -12,6 +12,7 @@
     /mmWaveDataHdl1/vel
     /teraranger_evo
     /command
+    /status
     /high_level_command
     /z_state_estimator/odom
     /vrpn_client_node/A01RaIner/pose

@@ -1,6 +1,6 @@
 <launch>
 
-  <node pkg="rosbag" type="record" name="record_sensors_node" output="screen" args="-o /home/ohrad/ASPEN-11-29/data 
+  <node pkg="rosbag" type="record" name="record_sensors_node" output="screen" args="-o /home/ohrad/EDGAR_PREP_12-5/sensorata 
     /imu_raw
     /mmWaveDataHdl/vel
     /mmWaveDataHdl1/vel
